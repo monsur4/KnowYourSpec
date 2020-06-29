@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KnowYourSpec</string>
+    <string name="all_specs">All Specs</string>
+    <string name="settings">Settings</string>
+    <string name="open_nav_drawer">open navigation drawer</string>
+    <string name="close_nav_drawer">close navigation drawer</string>
+    <string name="pref_key_notification_spec_of_the_day">pref_key_notification_spec_of_the_day</string>
+    <string name="pref_key_show_spec_name">pref_key_show_spec_name</string>
+    <string name="pref_key_notification_chat">pref_key_notification_chat</string>
+</resources>

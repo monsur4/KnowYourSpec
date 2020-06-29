@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/pref_key_show_spec_name"
+        android:summary="Check to show name of spec in game mode"
+        android:title="Show Spec Name"
+        app:iconSpaceReserved="false"/>
+    <ListPreference
+        android:defaultValue="medium"
+        android:entries="@array/pref_difficulty_entries"
+        android:entryValues="@array/pref_difficulty_values"
+        android:key="pref_key_difficulty"
+        android:title="Difficulty"
+        android:summary="Choose Level"
+        app:iconSpaceReserved="false"/>
+    <PreferenceCategory
+        android:title="Notifications"
+        app:iconSpaceReserved="false">
+        <SwitchPreference
+            android:id="@+id/notification_spec_of_the_day_id"
+            android:defaultValue="false"
+            android:key="@string/pref_key_notification_spec_of_the_day"
+            android:summary="Get a Notification of daily spec"
+            android:title="Notification About Spec of the Day"
+            app:iconSpaceReserved="false"/>
+    <SwitchPreference
+        android:id="@+id/notification_chat_id"
+        android:defaultValue="false"
+        android:key="@string/pref_key_notification_chat"
+        android:summary="Get a Notification when a spec is online"
+        android:title="Chat with a spec when online"
+        app:iconSpaceReserved="false"/>
+</PreferenceCategory>
+</PreferenceScreen>
