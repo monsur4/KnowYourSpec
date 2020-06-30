@@ -44,13 +44,15 @@ public class NotificationJobService extends JobService {
         PendingIntent pendingIntent = PendingIntent.getActivity(NotificationJobService.this,
                 REQUEST_CODE,
                 intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        // to add an action
+        NotificationCompat.Action action = new NotificationCompat.Action(R.drawable.ic_share, "Share", pendingIntent);
 
         NotificationCompat.Builder notificationBuilder =  new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_person)
                 .setContentTitle("Title")
                 .setContentText("Content")
                 .setContentIntent(pendingIntent)
-                //.addAction()
+                .addAction(action)
                 .setAutoCancel(true);
 
         Notification notification = notificationBuilder.build();
