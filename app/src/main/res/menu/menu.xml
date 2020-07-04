@@ -4,6 +4,7 @@
 
     <item
         android:id="@+id/action_all_specs"
+        android:contentDescription="@string/settings"
         android:title="@string/all_specs"
         app:showAsAction="never" />
     <item

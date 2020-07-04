@@ -18,6 +18,7 @@ import com.spec.knowyourspec.paging.SpecViewModelFactory;
 public class SpecListActivity extends AppCompatActivity {
     SpecViewModelFactory mSpecViewModelFactory;
     SpecViewModel mSpecViewModel;
+    RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,12 @@ public class SpecListActivity extends AppCompatActivity {
 
         mSpecViewModelFactory = new SpecViewModelFactory(this);
         mSpecViewModel = new ViewModelProvider(this, mSpecViewModelFactory).get(SpecViewModel.class);
-        RecyclerView recyclerView = findViewById(R.id.spec_list_recycler_view);
+        mRecyclerView = findViewById(R.id.spec_list_recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         final SpecListAdapter adapter = new SpecListAdapter();
 
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(adapter);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setAdapter(adapter);
 
         mSpecViewModel.getAllSpecs().observe(this, new Observer<PagedList<Spec>>() {
             @Override

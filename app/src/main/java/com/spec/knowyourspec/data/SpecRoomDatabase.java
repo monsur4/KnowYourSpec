@@ -28,8 +28,8 @@ public abstract class SpecRoomDatabase extends RoomDatabase {
                         //.addCallback(sCallback)
                         .addCallback(new RoomDatabase.Callback(){
                             @Override
-                            public void onOpen(@NonNull SupportSQLiteDatabase db) {
-                                super.onOpen(db);
+                            public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                                super.onCreate(db);
                                 Executors.newSingleThreadExecutor().execute(new Runnable() {
                                     @Override
                                     public void run() {
